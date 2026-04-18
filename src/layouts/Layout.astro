@@ -1,0 +1,49 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = 'Wędkarski Dziennik — aplikacja do rejestrowania połowów.' } = Astro.props;
+const base = import.meta.env.BASE_URL;
+const home = base.endsWith('/') ? base : base + '/';
+---
+
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/svg+xml" href={`${home}favicon.svg`} />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <div class="shell">
+      <header class="site">
+        <a class="brand" href={home}>
+          <span class="brand-mark" aria-hidden="true">🎣</span>
+          <span class="brand-name">Wędkarski Dziennik</span>
+        </a>
+        <nav class="site" aria-label="Główna nawigacja">
+          <a href={home}>Strona główna</a>
+          <a href={`${home}privacy`}>Polityka prywatności</a>
+        </nav>
+      </header>
+
+      <main>
+        <slot />
+      </main>
+
+      <footer class="site">
+        <span>© {new Date().getFullYear()} Wędkarski Dziennik</span>
+        <span>
+          Kontakt: <a href="mailto:kondzio6@gmail.com">kondzio6@gmail.com</a>
+        </span>
+      </footer>
+    </div>
+  </body>
+</html>

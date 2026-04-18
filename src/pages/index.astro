@@ -1,0 +1,58 @@
+---
+import Layout from '../layouts/Layout.astro';
+const base = import.meta.env.BASE_URL;
+const home = base.endsWith('/') ? base : base + '/';
+---
+
+<Layout title="Wędkarski Dziennik — aplikacja dla wędkarzy">
+  <span class="pill">Android · bezpłatna</span>
+  <h1>Wędkarski Dziennik</h1>
+  <p class="lede">
+    Prosta aplikacja do rejestrowania Twoich połowów — gatunek, waga, długość,
+    zdjęcie i lokalizacja. Śledź rekordy osobiste (PB) i odkrywaj nowe gatunki.
+  </p>
+
+  <div class="card">
+    <h2 style="margin-top:0">Co potrafi aplikacja?</h2>
+    <div class="feature-grid">
+      <div class="card">
+        <h3>Dziennik połowów</h3>
+        <p>Zapisz każdą zdobycz: gatunek, wagę, długość, metodę, przynętę i wędkę.</p>
+      </div>
+      <div class="card">
+        <h3>Rekordy osobiste</h3>
+        <p>Aplikacja automatycznie śledzi Twoje PB dla wagi i długości w każdym gatunku.</p>
+      </div>
+      <div class="card">
+        <h3>Zdjęcia trofeów</h3>
+        <p>Dołącz zdjęcie z aparatu lub galerii i udostępniaj znajomym.</p>
+      </div>
+      <div class="card">
+        <h3>Mapa połowów</h3>
+        <p>Zapisuj lokalizację złowionych ryb i przeglądaj je na mapie.</p>
+      </div>
+      <div class="card">
+        <h3>Statystyki</h3>
+        <p>Podgląd połowów wg gatunku, metody i miesiąca.</p>
+      </div>
+      <div class="card">
+        <h3>Sprzęt</h3>
+        <p>Lista używanych przynęt i wędek, budowana automatycznie.</p>
+      </div>
+    </div>
+  </div>
+
+  <h2>Prywatność</h2>
+  <p>
+    Wszystkie Twoje połowy, zdjęcia i notatki są przechowywane
+    <strong>lokalnie na urządzeniu</strong>. Aplikacja nie posiada konta
+    użytkownika ani serwera — Twoje dane nie są wysyłane na nasze serwery.
+    Szczegóły: <a href={`${home}privacy`}>Polityka prywatności</a>.
+  </p>
+
+  <h2>Kontakt</h2>
+  <p>
+    Pytania, błędy, sugestie? Napisz na
+    <a href="mailto:kondzio6@gmail.com">kondzio6@gmail.com</a>.
+  </p>
+</Layout>
