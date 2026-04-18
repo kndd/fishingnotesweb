@@ -35,6 +35,6 @@ SITE_URL=https://example.com BASE_PATH=/ npm run build
 
 ## Treść
 
-- `src/pages/index.astro` — opis aplikacji.
-- `src/pages/privacy.astro` — polityka prywatności (link do wklejenia w Play Console).
-- Kontakt: `kondzio6@gmail.com`.
+- `src/pages/index.astro` — opis aplikacji
+- `src/pages/privacy.astro` — polityka prywatności (link do wklejenia w Play Console)
+- Kontakt: `kondzio6@gmail.com`
